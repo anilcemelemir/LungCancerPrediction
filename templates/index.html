@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanser Riski Tahmini</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('static/Image1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .form-container {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            background-color:  #ff0099;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color:  #ff0099;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="col-md-6 form-container">
+            <h1 class="form-header">Kanser Riski Tahmini</h1>
+            <form method="POST" action="/predict">
+                <div class="form-group">
+                    <label for="GENDER" class="form-label">Cinsiyet:</label>
+                    <select name="GENDER" class="form-control" required>
+                        <option value="1">Erkek</option>
+                        <option value="2">Kadın</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="AGE" class="form-label">Yaş:</label>
+                    <input type="number" name="AGE" class="form-control" required>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="SMOKING" class="form-check-input" id="SMOKING">
+                    <label for="SMOKING" class="form-check-label">Sigara</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="YELLOW_FINGERS" class="form-check-input" id="YELLOW_FINGERS">
+                    <label for="YELLOW_FINGERS" class="form-check-label">Sararmış Parmaklar</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="ANXIETY" class="form-check-input" id="ANXIETY">
+                    <label for="ANXIETY" class="form-check-label">Anksiyete</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="PEER_PRESSURE" class="form-check-input" id="PEER_PRESSURE">
+                    <label for="PEER_PRESSURE" class="form-check-label">Arkadaş Baskısı</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="CHRONIC DISEASE" class="form-check-input" id="CHRONIC_DISEASE">
+                    <label for="CHRONIC_DISEASE" class="form-check-label">Kronik Hastalık</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="FATIGUE" class="form-check-input" id="FATIGUE">
+                    <label for="FATIGUE" class="form-check-label">Yorgunluk</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="ALLERGY" class="form-check-input" id="ALLERGY">
+                    <label for="ALLERGY" class="form-check-label">Alerji</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="WHEEZING" class="form-check-input" id="WHEEZING">
+                    <label for="WHEEZING" class="form-check-label">Hırıltı</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="ALCOHOL CONSUMING" class="form-check-input" id="ALCOHOL_CONSUMING">
+                    <label for="ALCOHOL_CONSUMING" class="form-check-label">Alkol Tüketimi</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="COUGHING" class="form-check-input" id="COUGHING">
+                    <label for="COUGHING" class="form-check-label">Öksürük</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="SHORTNESS OF BREATH" class="form-check-input" id="SHORTNESS_OF_BREATH">
+                    <label for="SHORTNESS_OF_BREATH" class="form-check-label">Nefes Darlığı</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="SWALLOWING DIFFICULTY" class="form-check-input" id="SWALLOWING_DIFFICULTY">
+                    <label for="SWALLOWING_DIFFICULTY" class="form-check-label">Yutma Zorluğu</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="CHEST PAIN" class="form-check-input" id="CHEST_PAIN">
+                    <label for="CHEST_PAIN" class="form-check-label">Göğüs Ağrısı</label>
+                </div>
+
+                <button type="submit" class="btn btn-custom btn-block mt-4">Tahmin Et</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

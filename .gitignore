@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Data and models
+*.csv
+*.xlsx
+*.sav
+*.pkl
+*.joblib
+data/
+models/
+
+# Flask-related
+instance/
+.env
+
+# Logs
+*.log
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE & OS
+.vscode/
+.DS_Store
+Thumbs.db

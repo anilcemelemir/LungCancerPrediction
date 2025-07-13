@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahmin Sonucu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('static/Image1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .result-container {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="col-md-6 result-container">
+            <h1>Tahmin Sonucu</h1>
+            <p><strong>Sonuç:</strong> {{ prediction }}</p>
+            <p><strong>Kanser Riski Olasılığı:</strong> {{ probability }}</p>
+            <div class="mt-4">
+                <a href="/" class="btn btn-custom btn-block">Yeni Tahmin Yap</a>
+                <a href="/survival" class="btn btn-custom btn-block mt-2">Hasta Yaşar Mı?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
