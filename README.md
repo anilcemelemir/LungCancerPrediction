@@ -60,7 +60,7 @@ python src/train_survival_model.py
 ### 4. Run the App
 
 ```bash
-python app.py
+python main.py
 ```
 
 Then go to `http://localhost:5000` in your browser.
