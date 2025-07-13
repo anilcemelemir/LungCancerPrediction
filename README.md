@@ -70,7 +70,7 @@ Then go to `http://localhost:5000` in your browser.
 
 ## 📄 License
 
-MIT License © 2025 Anıl Cem Elemir
+MIT License © 2025 Anıl Cem Elemir, Semih Çetin, Velihan Özge
 
 ---
 
